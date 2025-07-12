@@ -1,11 +1,11 @@
 Summary:	A Wayland window-stacking compositor
 Name:		labwc
-Version:	0.8.4
+Version:	0.9.0
 Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	https://github.com/labwc/labwc/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	c3dae269fcfeb867539e596bda69a599
+# Source0-md5:	5baaddbd9fe7d14179e11c3cd8b0e851
 URL:		https://labwc.github.io
 BuildRequires:	cairo-devel
 BuildRequires:	gettext-tools
@@ -25,10 +25,11 @@ BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	scdoc
 BuildRequires:	wayland-devel >= 1.19.0
-BuildRequires:	wayland-protocols >= 1.35
-BuildRequires:	wlroots0.18-devel
+BuildRequires:	wayland-protocols >= 1.39
+BuildRequires:	wlroots0.19-devel
 BuildRequires:	xcb-util-wm-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
+BuildRequires:	xorg-xserver-Xwayland-devel >= 21.1.9
 Requires(post,postun):	gtk-update-icon-cache
 Requires:	hicolor-icon-theme
 Requires:	libinput >= 1.14
@@ -75,6 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CONTRIBUTING.md NEWS.md README.md docs/{autostart,environment,menu.xml,rc.xml,rc.xml.all,shutdown,themerc}
 %attr(755,root,root) %{_bindir}/labwc
+%attr(755,root,root) %{_bindir}/lab-sensible-terminal
 %{_iconsdir}/hicolor/scalable/apps/labwc*.svg
 %{_mandir}/man1/labwc.1*
 %{_mandir}/man5/labwc-*.5*
