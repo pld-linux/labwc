@@ -1,11 +1,11 @@
 Summary:	A Wayland window-stacking compositor
 Name:		labwc
-Version:	0.9.1
+Version:	0.9.2
 Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	https://github.com/labwc/labwc/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	c6af529b81d1f4e1febb0179af9f473c
+# Source0-md5:	7c6c7e55479849f4cec62919d845b8cf
 URL:		https://labwc.github.io
 BuildRequires:	cairo-devel
 BuildRequires:	gettext-tools
@@ -75,9 +75,11 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc CONTRIBUTING.md NEWS.md README.md docs/{autostart,environment,menu.xml,rc.xml,rc.xml.all,shutdown,themerc}
+%attr(755,root,root) %{_bindir}/labnag
 %attr(755,root,root) %{_bindir}/labwc
 %attr(755,root,root) %{_bindir}/lab-sensible-terminal
 %{_iconsdir}/hicolor/scalable/apps/labwc*.svg
+%{_mandir}/man1/labnag.1*
 %{_mandir}/man1/labwc.1*
 %{_mandir}/man5/labwc-*.5*
 %{_datadir}/wayland-sessions/labwc.desktop
