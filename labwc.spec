@@ -11,7 +11,7 @@ BuildRequires:	cairo-devel
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
 BuildRequires:	libdrm-devel
-BuildRequires:	libinput-devel >= 1.14
+BuildRequires:	libinput-devel >= 1.27
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 2.46
 BuildRequires:	libsfdo-devel >= 0.1.3
@@ -32,7 +32,7 @@ BuildRequires:	xorg-lib-libxkbcommon-devel
 BuildRequires:	xorg-xserver-Xwayland-devel >= 21.1.9
 Requires(post,postun):	gtk-update-icon-cache
 Requires:	hicolor-icon-theme
-Requires:	libinput >= 1.14
+Requires:	libinput >= 1.27
 Requires:	librsvg >= 2.46
 Requires:	libsfdo >= 0.1.3
 Requires:	wayland >= 1.19.0
