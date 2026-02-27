@@ -1,11 +1,11 @@
 Summary:	A Wayland window-stacking compositor
 Name:		labwc
-Version:	0.9.3
+Version:	0.9.4
 Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	https://github.com/labwc/labwc/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	41eeab2a823d62c95ab829451b52d755
+# Source0-md5:	bc152ec202da213e765ac348869b666a
 URL:		https://labwc.github.io
 BuildRequires:	cairo-devel
 BuildRequires:	gettext-tools
@@ -24,7 +24,7 @@ BuildRequires:	pixman-devel
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	scdoc
-BuildRequires:	wayland-devel >= 1.19.0
+BuildRequires:	wayland-devel >= 1.22.90
 BuildRequires:	wayland-protocols >= 1.39
 BuildRequires:	wlroots0.19-devel
 BuildRequires:	xcb-util-wm-devel
@@ -35,7 +35,7 @@ Requires:	hicolor-icon-theme
 Requires:	libinput >= 1.27
 Requires:	librsvg >= 2.46
 Requires:	libsfdo >= 0.1.3
-Requires:	wayland >= 1.19.0
+Requires:	wayland >= 1.22.90
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
