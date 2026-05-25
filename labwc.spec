@@ -1,11 +1,11 @@
 Summary:	A Wayland window-stacking compositor
 Name:		labwc
-Version:	0.9.7
+Version:	0.20.0
 Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	https://github.com/labwc/labwc/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	76de3059b6a1b38eccdd9aeba1857cfb
+# Source0-md5:	708109a7b80a57e94dd00f8255163300
 URL:		https://labwc.github.io
 BuildRequires:	cairo-devel
 BuildRequires:	gettext-tools
@@ -26,7 +26,7 @@ BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	scdoc
 BuildRequires:	wayland-devel >= 1.22.90
 BuildRequires:	wayland-protocols >= 1.39
-BuildRequires:	wlroots0.19-devel
+BuildRequires:	wlroots0.20-devel
 BuildRequires:	xcb-util-wm-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
 BuildRequires:	xorg-xserver-Xwayland-devel >= 21.1.9
@@ -78,6 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/labnag
 %attr(755,root,root) %{_bindir}/labwc
 %attr(755,root,root) %{_bindir}/lab-sensible-terminal
+%{systemduserunitdir}/labwc-session.target
 %{_iconsdir}/hicolor/scalable/apps/labwc*.svg
 %{_mandir}/man1/labnag.1*
 %{_mandir}/man1/labwc.1*
