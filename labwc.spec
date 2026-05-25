@@ -1,7 +1,7 @@
 Summary:	A Wayland window-stacking compositor
 Name:		labwc
 Version:	0.20.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications
 Source0:	https://github.com/labwc/labwc/archive/%{version}/%{name}-%{version}.tar.gz
@@ -26,7 +26,7 @@ BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	scdoc
 BuildRequires:	wayland-devel >= 1.22.90
 BuildRequires:	wayland-protocols >= 1.39
-BuildRequires:	wlroots0.20-devel
+BuildRequires:	wlroots0.20-devel >= 0.20.1
 BuildRequires:	xcb-util-wm-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
 BuildRequires:	xorg-xserver-Xwayland-devel >= 21.1.9
@@ -36,6 +36,7 @@ Requires:	libinput >= 1.27
 Requires:	librsvg >= 2.46
 Requires:	libsfdo >= 0.1.3
 Requires:	wayland >= 1.22.90
+Requires:	wlroots0.20 >= 0.20.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
