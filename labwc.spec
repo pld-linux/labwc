@@ -1,7 +1,7 @@
 Summary:	A Wayland window-stacking compositor
 Name:		labwc
 Version:	0.20.0
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Applications
 Source0:	https://github.com/labwc/labwc/archive/%{version}/%{name}-%{version}.tar.gz
@@ -61,6 +61,8 @@ rm -rf $RPM_BUILD_ROOT
 %meson_install
 
 %{__rm} $RPM_BUILD_ROOT%{_docdir}/%{name}/{README,autostart,environment,menu.xml,rc.xml,rc.xml.all,shutdown,themerc}
+
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/{sr_Latn,sr@latin}
 
 %find_lang %{name}
 
