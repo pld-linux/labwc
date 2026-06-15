@@ -1,11 +1,11 @@
 Summary:	A Wayland window-stacking compositor
 Name:		labwc
-Version:	0.20.0
-Release:	3
+Version:	0.20.1
+Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	https://github.com/labwc/labwc/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	708109a7b80a57e94dd00f8255163300
+# Source0-md5:	17fd0e0cf8e13312b45046cbbb0366d5
 URL:		https://labwc.github.io
 BuildRequires:	cairo-devel
 BuildRequires:	gettext-tools
